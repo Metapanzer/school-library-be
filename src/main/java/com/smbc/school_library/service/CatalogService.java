@@ -39,6 +39,7 @@ public class CatalogService {
                 .isbn(request.getIsbn())
                 .totalQty(request.getTotalQty())
                 .availableQty(request.getTotalQty())
+                .isDeleted(false)
                 .build();
         Catalog savedCatalog = catalogRepository.save(catalog);
         return ApiResponse.success(catalogMapper.mapToDto(savedCatalog), "Catalog added successfully");

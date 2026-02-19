@@ -3,6 +3,7 @@ package com.smbc.school_library.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.SQLRestriction;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,6 +20,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
+@SQLRestriction("is_deleted = false")
 public class Member implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

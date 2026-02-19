@@ -1,13 +1,11 @@
 package com.smbc.school_library.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class EditMemberRequestDto {
     @NotBlank
