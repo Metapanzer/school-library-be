@@ -1,14 +1,14 @@
 package com.smbc.school_library.dto.request;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
 public class PageRequestDto {
-    @NotBlank
+    @NotNull
     private Integer page;
-    @NotBlank
+    @NotNull
     private Integer pageSize;
 }
