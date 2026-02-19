@@ -44,8 +44,8 @@ public class MemberService {
     public ApiResponse<MemberResponseDto> editMember(Long memberId, EditMemberRequestDto request) {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new ResourceNotFoundException("Member not found with id: " + memberId));
 
-        if (request.getName() != null) {
-            member.setFullName(request.getName());
+        if (request.getFullName() != null) {
+            member.setFullName(request.getFullName());
         }
 
         memberRepository.save(member);
